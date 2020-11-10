@@ -10,6 +10,14 @@
 
 ?>
 
+<?php
+//grab the custom field for a page and display it
+$custom_group = get_field('hero');
+$card1_title = $custom_group['card1_title'];
+$card1_content = $custom_group['card1_content'];
+$card2_title = $custom_group['card2_title'];
+$card2_content = $custom_group['card2_content'];
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
         <?php // the_title( '<h1 class="entry-title">', '</h1>' ); 
@@ -30,6 +38,26 @@
         );
         ?>
     </div><!-- .entry-content -->
+    <?php if ($card1_title) : ?>
+        <div class="row row-cols-1 mt-4 row-cols-md-2">
+            <div class="col mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $card1_title; ?></h5>
+                        <p class="card-text"> <?php echo $card1_content; ?></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $card2_title; ?></h5>
+                        <p class="card-text"><?php echo $card2_content; ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
     <?php if (get_edit_post_link()) : ?>
         <footer class="entry-footer">
             <?php
