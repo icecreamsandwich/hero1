@@ -756,3 +756,20 @@ div.comment:first-of-type {
 .comment-reply-title small a:hover {
 	text-decoration: underline;
 }
+
+
+.widget_tag_cloud .tagcloud a {
+	background-color: #ddd;
+	border-radius: 3px;
+	color: #000;
+	display: inline-block;
+	font-size: 16px !important;
+	margin: 0 5px 5px 0;
+	padding: 2px 5px;
+	text-decoration: none;
+}
+
+.widget_tag_cloud .tagcloud a:hover {
+	background-color: #999;
+	color: #c3251d;
+}

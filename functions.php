@@ -167,8 +167,7 @@ add_action( 'widgets_init', 'hero1_widgets_init' );
  */
 function hero1_scripts() {
 	wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', array(), _S_VERSION );
-	wp_enqueue_style( 'hero1-style', get_stylesheet_uri(), array(), _S_VERSION );
-	//wp_enqueue_style( 'hero1-style2', get_template_directory_uri() . '/css/hero_style.css', array(), _S_VERSION );	
+	wp_enqueue_style( 'hero1-style', get_stylesheet_uri(), array(), _S_VERSION );	
 	wp_enqueue_style( 'fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css', array(), _S_VERSION );
 	wp_style_add_data( 'hero1-style', 'rtl', 'replace' );
 
